@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../../components/common/Navbar';
 
-function Home() {
+
+const Home = () => {
   return (
-    <div>
-        <h1>Welcome to the Home Page</h1>
-        <h2>Your one-stop solution for all your rental needs</h2>
-    </div>
-  )
-}
+    
+      <Navbar />
+      
+  );
+};
 
-export default Home
-
+export default Home;
