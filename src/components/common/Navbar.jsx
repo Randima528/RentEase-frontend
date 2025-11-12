@@ -33,6 +33,19 @@ const Navbar = () => {
         >
           Register
         </button>
+
+        <div className="relative ml-3">
+          <img
+            src="/images/sri-lanka-flag.png"
+            alt="Sri Lanka"
+            title="Sri Lanka"
+            className="w-8 h-8 rounded-full object-cover border border-white/30 shadow-sm"
+          />
+          <span className="absolute -bottom-1 -right-1 bg-black text-white text-[7px] font-semibold px-1 py-0.5 rounded-full border border-white/70 shadow-sm">
+            LK
+          </span>
+        </div>
+
       </div>
     </nav>
   );
