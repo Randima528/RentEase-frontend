@@ -28,7 +28,7 @@ const Navbar = () => {
           Login
         </button>
         <button 
-          onClick={() => window.location.href='#register'}
+          onClick={() => window.location.href='/register'}
           className="min-w-[120px] h-11 flex items-center justify-center px-6 rounded-[25px] bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-none cursor-pointer font-semibold transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(102,126,234,0.4)]"
         >
           Register
