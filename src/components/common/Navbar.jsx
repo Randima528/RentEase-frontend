@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-4 items-center">
         <button 
-          onClick={() => window.location.href='#login'}
+          onClick={() => window.location.href='/login'}
           className="min-w-[120px] h-11 flex items-center justify-center px-6 rounded-[25px] border-2 border-[#667eea] bg-transparent text-[#667eea]  cursor-pointer font-semibold transition-all hover:bg-gradient-to-r from-[#667eea] to-[#764ba2] hover:text-white hover:-translate-y-0.5 hover:border-hidden hover:shadow-[0_8px_20px_rgba(102,126,234,0.4)]"
         >
           Login
