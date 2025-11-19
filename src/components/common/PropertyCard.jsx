@@ -1,7 +1,14 @@
 import React from 'react';
-import { MapPin , House } from 'lucide-react';
+import { MapPin, House } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const PropertyCard = ({ badge, title, location, price, image }) => {
+const PropertyCard = ({ badge, title, location, price, image, id }) => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    navigate(`/property/${id || '1'}`);
+  };
+
   return (
     <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-all cursor-pointer hover:-translate-y-2.5 hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)]">
       <div className="w-full h-[220px] bg-gradient-to-r from-[#667eea30] to-[#764ba230] relative overflow-hidden">
@@ -9,7 +16,6 @@ const PropertyCard = ({ badge, title, location, price, image }) => {
           {badge}
         </div>
 
-        
         {image ? (
           <img src={image} alt={title} className="w-full h-full object-cover" />
         ) : (
@@ -28,7 +34,10 @@ const PropertyCard = ({ badge, title, location, price, image }) => {
           <span className="text-[1.8rem] font-bold bg-gradient-to-r from-[#667eea] to-[#764ba2] bg-clip-text text-transparent">
             Rs.{price}<small className="text-base">/mo</small>
           </span>
-          <button className="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-6 py-2.5 rounded-[20px] border-none cursor-pointer font-semibold transition-transform hover:scale-105">
+          <button 
+            onClick={handleViewDetails}
+            className="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-6 py-2.5 rounded-[20px] border-none cursor-pointer font-semibold transition-transform hover:scale-105"
+          >
             View Details
           </button>
         </div>
