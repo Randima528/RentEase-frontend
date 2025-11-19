@@ -11,14 +11,13 @@ import house6 from '/images/house6.jpeg';
 
 const FeaturedProperties = () => {
   const properties = [
-  { badge: 'Featured', title: 'Modern Apartment in Colombo City', location: 'Colombo 07, Cinnamon Gardens', price: '150,000', image: house1 },
-  { badge: 'New', title: 'Spacious Family House', location: 'Kandy, Katugastota', price: '95,000', image: house2 },
-  { badge: 'Hot', title: 'Luxury Penthouse Apartment', location: 'Colombo 03, Kollupitiya', price: '250,000', image: house3 },
-  { badge: 'Featured', title: 'Cozy Annex for Rent', location: 'Galle, Richmond Hill', price: '45,000', image: house4 },
-  { badge: 'New', title: 'Commercial Shop Space', location: 'Kurunegala, Town Center', price: '80,000', image: house5 },
-  { badge: 'Hot', title: 'Restaurant Space with Parking', location: 'Negombo, Main Street', price: '120,000', image: house6 },
-];
-
+    { id: 1, badge: 'Featured', title: 'Modern Apartment in Colombo City', location: 'Colombo 07, Cinnamon Gardens', price: '150,000', image: house1 },
+    { id: 2, badge: 'New', title: 'Spacious Family House', location: 'Kandy, Katugastota', price: '95,000', image: house2 },
+    { id: 3, badge: 'Hot', title: 'Luxury Penthouse Apartment', location: 'Colombo 03, Kollupitiya', price: '250,000', image: house3 },
+    { id: 4, badge: 'Featured', title: 'Cozy Annex for Rent', location: 'Galle, Richmond Hill', price: '45,000', image: house4 },
+    { id: 5, badge: 'New', title: 'Commercial Shop Space', location: 'Kurunegala, Town Center', price: '80,000', image: house5 },
+    { id: 6, badge: 'Hot', title: 'Restaurant Space with Parking', location: 'Negombo, Main Street', price: '120,000', image: house6 },
+  ];
 
   return (
     <section className="bg-white px-[5%] py-16 rounded-t-[50px]">
@@ -27,8 +26,8 @@ const FeaturedProperties = () => {
       </h2>
       
       <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-8 mb-12">
-        {properties.map((property, index) => (
-          <PropertyCard key={index} {...property} />
+        {properties.map((property) => (
+          <PropertyCard key={property.id} {...property} />
         ))}
       </div>
     </section>
